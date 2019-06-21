@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class WordSetTest {
 
     @Test
-    public void wordSetTest() {
+    public void wordSetInputTest() {
 
         final WordSet wordSet = new WordSet();
 
@@ -27,7 +27,10 @@ public class WordSetTest {
         assertEquals("[duo, fog, toy, wig]", wordSet.get("cow").toString());
         assertEquals("[mag, ray, ted]", wordSet.get("sea").toString());
 
+        assertEquals("[mag, ray, ted]", wordSet.add("sea").toString());
+
         assertTrue(wordSet.remove("sea"));
         assertFalse(wordSet.remove("sadfasfdfa"));
     }
+
 }

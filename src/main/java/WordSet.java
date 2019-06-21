@@ -17,7 +17,7 @@ public class WordSet {
      * @return if word exists returns a list of words where each contains a character from given  word.
      * or if word does not exist return an empty list.
      */
-    public List<String> add(String word) {
+    public List<String> add(final String word) {
         if (words.contains(word)) {
             return buildListThatContainsAnyCharacterFromWordParameterInStoredWords(word);
         } else {
@@ -64,7 +64,7 @@ public class WordSet {
      * @param wordTwo String input.
      * @return true if word one contains any character from word two.
      */
-    private boolean wordOneContainsAnyCharacterFromWordTwo(String wordOne, final String wordTwo) {
+    private boolean wordOneContainsAnyCharacterFromWordTwo(final String wordOne, final String wordTwo) {
         return containsAny(wordOne, wordTwo.toCharArray());
     }
 
